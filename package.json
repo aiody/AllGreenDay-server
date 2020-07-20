@@ -1,0 +1,38 @@
+{
+  "name": "allgreenday-server",
+  "version": "1.0.0",
+  "description": "습관을 관리해주는 웹 어플리케이션 AllGreenDay의 서버입니다.   기획 및 스케줄은 [여기](https://www.notion.so/Solo-Project-AllGreenDay-03a4e3560321455fb286ac092b39efc2)서 관리하고 있습니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiody/AllGreenDay-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aiody/AllGreenDay-server/issues"
+  },
+  "homepage": "https://github.com/aiody/AllGreenDay-server#readme",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11"
+  },
+  "dependencies": {}
+}

@@ -15,10 +15,10 @@ module.exports = {
     dialect: 'mysql'
   },
   production: {
-    username: 'root',
+    username: 'admin',
     password: process.env.DATABASE_PASSWORD,
     database: 'allgreenday',
-    host: '127.0.0.1',
+    host: 'allgreenday.cvlaa2wuiuxv.ap-northeast-2.rds.amazonaws.com',
     dialect: 'mysql'
   }
 };

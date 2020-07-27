@@ -1,6 +1,6 @@
 # 장기 버전 12.18.2
 FROM node:lts-slim
-MAINTAINER Areum Kim <aiody329@gmail.com>
+LABEL maintainer="aiody329@gmail.com"
 
 # 컨테이너 내부에 작업할 폴더 만들기
 RUN mkdir -p /AllGreenDay-server

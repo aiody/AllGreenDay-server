@@ -1,0 +1,40 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/ssl/nginx/allgreenday.site/:/etc/ssl/nginx/allgreenday.site/
+      - /etc/ssl/certs/:/etc/ssl/certs/
+  server1:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    container_name: node_server_1
+    ports:
+      - 8081:4000
+    env_file:
+      - ../.env
+  server2:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    container_name: node_server_2
+    ports:
+      - 8082:4000
+    env_file:
+      - ../.env
+  server3:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    container_name: node_server_3
+    ports:
+      - 8083:4000
+    env_file:
+      - ../.env
